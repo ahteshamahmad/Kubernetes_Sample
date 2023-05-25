@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  tasks:
+  - debug:
+      msg: "print the value of {{ var1 }} and {{ var2 }}"

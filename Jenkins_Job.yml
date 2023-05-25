@@ -1,0 +1,18 @@
+- name: trigger
+  hosts: localhost
+  vars:
+    Uname: "ahtesham"
+    Pass: "Rax@1234"
+    HostName: "18.118.208.49:8080"
+    TokenName: "123456"
+    JobName: "Demo"
+  tasks:
+  - name: build queue
+    uri:
+      url: "http://{{ HostName }}/job/{{ JobName }}/build?token={{ TokenName }}"
+      method: GET
+      user: "{{ Uname }}"
+      password: "{{ Pass }}"
+      force_basic_auth: yes
+      status_code: 201
+

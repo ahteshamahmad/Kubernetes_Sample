@@ -1,0 +1,9 @@
+---
+- name: Practice
+  hosts: 172.31.3.145
+  vars: 
+    Myname: "Md Ahtesham"
+  tasks:
+    - name: print the name
+      debug:
+        var: Myname

@@ -1,0 +1,8 @@
+---
+- name: Copy HTML file to server and restart httpd service
+  hosts: localhost
+  become: true
+  tasks:
+    - package: "name=httpd state=present"
+    - copy: "src=index.html dest=/var/www/html"
+    - service: "name=httpd state=restarted"

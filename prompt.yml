@@ -1,0 +1,12 @@
+---
+- name: Prompt command
+  hosts: localhost
+  vars:
+    var1: "Md Ahtesham"
+  vars_prompt:
+    name: var
+    prompt: Enter any number ?
+  tasks:
+  - name: show the output
+    debug:
+      msg: "{{ var1 }}"

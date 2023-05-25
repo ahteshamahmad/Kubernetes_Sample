@@ -1,0 +1,8 @@
+---
+- name: Play name
+  hosts: 172.31.3.145
+  tasks:
+    - name: Pull Git repository
+      git:
+        repo: https://github.com/ahteshamahmad/MCQ_Shell_Scripting.git
+        dest: /home/ec2-user

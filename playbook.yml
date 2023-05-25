@@ -1,0 +1,10 @@
+- name: Example playbook
+  hosts: all
+  tasks:
+    - name: Loop over a list of strings
+      debug:
+        msg: "The current item is {{ item }}"
+      loop:
+        - item1
+        - item2
+        - item3

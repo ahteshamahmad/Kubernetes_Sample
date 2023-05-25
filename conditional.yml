@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+  - name: create a file
+    copy:
+      dest: /home/ec2-user/ahtu.txt
+      content: "This file created based on when expression1"
+    when: true
+
+  
