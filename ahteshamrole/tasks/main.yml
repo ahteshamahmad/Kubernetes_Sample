@@ -1,0 +1,8 @@
+---
+# tasks file for ahteshamrole
+
+- name: create file1
+  hosts: localhost
+  tasks: 
+  - name:
+    command: touch /home/ec2-use/dir1

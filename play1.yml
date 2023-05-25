@@ -1,0 +1,13 @@
+---
+- name: Just for practice
+  hosts: webserver1
+  vars:
+    var1: 34
+    var2: 65
+  tasks: 
+  - name: print a number
+    debug:
+      msg: "{{ var1 + var2 }}"
+  tasks:
+  - name: exit from the user
+    command: "touch /home/ec2-user/a.yml"

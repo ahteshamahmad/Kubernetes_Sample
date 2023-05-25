@@ -1,0 +1,26 @@
+---
+- name: fix the error
+  hosts: localhost
+  become: yes
+  tasks:
+    - block: 
+        - name: Show Message
+          debug:
+            msg: "Trying http"
+        - name: install package
+          yum:
+            name: httpd-no
+            state: present
+      rescue:
+        - name: show the error
+          debug:
+            msg: "Unknown package"
+        - name: Install nginx
+          yum:
+            name: git
+            state: present
+      always:
+        - name: print the execution
+          debug:
+            msg: Playbook done
+...
